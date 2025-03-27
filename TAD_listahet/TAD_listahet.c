@@ -26,7 +26,7 @@ void* lsthet_cria_elemento (int tipo){
             printf("Criando um retangulo.\n");
             printf("Digite a base: ");
             scanf("%f%*c", &ptr1->b);
-            printf("Digite a altura:");
+            printf("Digite a altura: ");
             scanf("%f%*c", &ptr1->h);
             return (void*)ptr1;
 
@@ -42,7 +42,7 @@ void* lsthet_cria_elemento (int tipo){
             printf("Criando um triangulo.\n");
             printf("Digite a base: ");
             scanf("%f%*c", &ptr3->b);
-            printf("Digite a altura:");
+            printf("Digite a altura: ");
             scanf("%f%*c", &ptr3->h);
             return (void*)ptr3;
 
@@ -60,32 +60,32 @@ int lsthet_vazia (Listahet* l){
 
 Listahet* lsthet_busca (Listahet* l, int id); 
 
-// void lsthet_imprime (Listahet* l){
-//     for( ; l != NULL; l = l->prox){
-//         switch(l->tipo){
-//             case RET:
-//                 Retangulo* ret = (Retangulo*)l->info;
-//                 printf("====Retangulo====\n");
-//                 printf("base: %.2f\n", ret->b);
-//                 printf("altura: %.2f\n", ret->h);
-//                 break;
+void lsthet_imprime (Listahet* l){
+    for( ; l != NULL; l = l->prox){
+        switch(l->tipo){
+            case RET:
+                Retangulo* ret = (Retangulo*)l->info;
+                printf("====Retangulo====\n");
+                printf("base: %.2f\n", ret->b);
+                printf("altura: %.2f\n\n", ret->h);
+                break;
 
-//             case TRI: 
-//                 Triangulo* tri = (Triangulo*)l->info;
-//                 printf("====Triangulo====\n");
-//                 printf("base: %.2f\n", tri->b);
-//                 printf("altura: %.2f\n", tri->h);
-//                 break;
+            case TRI: 
+                Triangulo* tri = (Triangulo*)l->info;
+                printf("====Triangulo====\n");
+                printf("base: %.2f\n", tri->b);
+                printf("altura: %.2f\n\n", tri->h);
+                break;
 
-//             case CIR:
-//                 Circulo* cir = (Circulo*)l->info;
-//                 printf("====Circulo====\n");
-//                 printf("raio: %.2f\n", cir->r);
-//                 break;
+            case CIR:
+                Circulo* cir = (Circulo*)l->info;
+                printf("====Circulo====\n");
+                printf("raio: %.2f\n\n", cir->r);
+                break;
 
-//             default:
-//                 printf("Tipo nao suportado");
-//                 break;
-//         }
-//     }
-// }
+            default:
+                printf("Tipo nao suportado.\n");
+                break;
+        }
+    }
+}

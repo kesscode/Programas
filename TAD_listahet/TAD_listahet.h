@@ -32,18 +32,18 @@ typedef struct retangulo Retangulo;
 typedef struct circulo Circulo;
 typedef struct triangulo Triangulo;
 
-Listahet* lsthet_cria(); 
+Listahet* lsthet_cria(); //OK
 Listahet* lsthet_libera (Listahet* l); 
 
-Listahet* lsthet_insere (Listahet* l, int id, int tipo, void* info); 
-void* lsthet_cria_elemento (int tipo);
+Listahet* lsthet_insere (Listahet* l, int id, int tipo, void* info); //OK
+void* lsthet_cria_elemento (int tipo); //OK
 Listahet* lsthet_retira (Listahet *l, int id); 
 
-int lsthet_vazia (Listahet* l); 
+int lsthet_vazia (Listahet* l); //OK
 
 Listahet* lsthet_busca (Listahet* l, int id); 
 
-void lsthet_imprime (Listahet* l); 
+void lsthet_imprime (Listahet* l); //OK
 
 #include"TAD_listahet.c"
 #endif

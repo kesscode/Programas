@@ -4,6 +4,7 @@
 int main(){
     Listahet* lis = lsthet_cria();
 
+    printf("\n");
     lis = lsthet_insere(lis, 1, RET, lsthet_cria_elemento(RET));
     printf("\n");
     lis = lsthet_insere(lis, 2, CIR, lsthet_cria_elemento(CIR));
@@ -17,7 +18,8 @@ int main(){
         printf("\nLista nao esta vazia.\n");
     }
 
-    //lsthet_imprime(lis);
+    printf("\n");
+    lsthet_imprime(lis);
 
     return 0;
 }
